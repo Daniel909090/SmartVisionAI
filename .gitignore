@@ -1,0 +1,16 @@
+# Ignore build artefacts and secrets
+# .NET / MAUI
+bin/
+obj/
+*.user
+.vs/
+ECHO is on.
+# Python virtual-env
+backend/.venv/
+ECHO is on.
+# Secrets
+backend/service-account.json
+ECHO is on.
+# OS cruft
+Thumbs.db
+.DS_Store

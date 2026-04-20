@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartVisionAI.MainPage"
+             Title="SmartVisionAI">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="25" Spacing="20">
+
+            <Label Text="SmartVisionAI"
+                   FontSize="30"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Upload or capture an image and get an AI-generated description."
+                   FontSize="16"
+                   HorizontalTextAlignment="Center"
+                   TextColor="Gray" />
+
+            <Frame BorderColor="LightGray"
+                   CornerRadius="12"
+                   Padding="10"
+                   HeightRequest="250">
+
+                <Image x:Name="SelectedImage"
+                     
+                       Aspect="AspectFit"
+                       HorizontalOptions="Fill"
+                       VerticalOptions="Fill" />
+            </Frame>
+
+            <Button Text="Upload Image"
+                    x:Name="UploadButton"
+                    Clicked="OnUploadClicked"
+                    HeightRequest="50" />
+
+            <Button Text="Take Photo"
+                    x:Name="CameraButton"
+                    Clicked="OnCameraClicked"
+                    HeightRequest="50" />
+
+            <Button Text="Analyse Image"
+                    x:Name="AnalyseButton"
+                    Clicked="OnAnalyseClicked"
+                    HeightRequest="50" />
+
+            <Label Text="Result"
+                   FontSize="22"
+                   FontAttributes="Bold" />
+
+            <Frame BorderColor="LightGray"
+                   CornerRadius="12"
+                   Padding="15">
+                <Label x:Name="ResultLabel"
+                       Text="No analysis yet."
+                       FontSize="16" />
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
